@@ -1,0 +1,812 @@
+[
+  {
+    "id": 1,
+    "name": "Casual T-Shirt",
+    "description": "Kaos katun nyaman untuk sehari-hari dengan desain minimalis.",
+    "price": 120000,
+    "flashSalePrice": 89000,
+    "isFlashSale": true,
+    "brand": "CottonComfort",
+    "categories": ["Pakaian", "Kaos"],
+    "rating": 4.5,
+    "reviewCount": 128,
+    "stock": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+      "https://images.unsplash.com/photo-1523381294911-8d3cead13475",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Denim Jacket",
+    "description": "Jaket denim klasik yang cocok untuk gaya santai maupun formal.",
+    "price": 350000,
+    "flashSalePrice": 299000,
+    "isFlashSale": true,
+    "brand": "DenimWorks",
+    "categories": ["Pakaian", "Jaket"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea",
+      "https://images.unsplash.com/photo-1603217040941-9fb54abcda56"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Slim Fit Jeans",
+    "description": "Celana jeans slim fit dengan bahan stretch untuk kenyamanan ekstra.",
+    "price": 280000,
+    "brand": "JeanStyle",
+    "categories": ["Pakaian", "Celana"],
+    "rating": 4.3,
+    "reviewCount": 156,
+    "stock": 34,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d",
+      "https://images.unsplash.com/photo-1582418702059-97ebafb35d09",
+      "https://images.unsplash.com/photo-1582552938357-32b906df40cb"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "White Sneakers",
+    "description": "Sepatu sneakers putih yang stylish dan serbaguna untuk segala suasana.",
+    "price": 500000,
+    "flashSalePrice": 399000,
+    "isFlashSale": true,
+    "brand": "FootStyle",
+    "categories": ["Sepatu", "Sneakers"],
+    "rating": 4.8,
+    "reviewCount": 203,
+    "stock": 18,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Leather Handbag",
+    "description": "Tas kulit elegan dengan ruang penyimpanan luas untuk kebutuhan harian.",
+    "price": 650000,
+    "brand": "LeatherLux",
+    "categories": ["Aksesoris", "Tas"],
+    "rating": 4.6,
+    "reviewCount": 95,
+    "stock": 12,
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      "https://images.unsplash.com/photo-1591561954557-26941169b49e"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Formal Shirt",
+    "description": "Kemeja formal berbahan halus, cocok untuk kerja maupun acara resmi.",
+    "price": 220000,
+    "brand": "OfficeWear",
+    "categories": ["Pakaian", "Kemeja"],
+    "rating": 4.4,
+    "reviewCount": 112,
+    "stock": 28,
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10",
+      "https://images.unsplash.com/photo-1506634572416-48cdfe530110",
+      "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Summer Dress",
+    "description": "Gaun musim panas dengan motif floral, ringan dan adem dipakai.",
+    "price": 300000,
+    "flashSalePrice": 249000,
+    "isFlashSale": true,
+    "brand": "SummerBreeze",
+    "categories": ["Pakaian", "Gaun"],
+    "rating": 4.2,
+    "reviewCount": 78,
+    "stock": 20,
+    "images": [
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea",
+      "https://images.unsplash.com/photo-1585487000113-4e5d4a8a3b0f"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Wool Sweater",
+    "description": "Sweater wol hangat dengan desain modern dan nyaman dipakai.",
+    "price": 270000,
+    "brand": "WinterComfort",
+    "categories": ["Pakaian", "Sweater"],
+    "rating": 4.1,
+    "reviewCount": 64,
+    "stock": 15,
+    "images": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105",
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sports Shorts",
+    "description": "Celana pendek olahraga dengan bahan ringan dan elastis.",
+    "price": 150000,
+    "flashSalePrice": 119000,
+    "isFlashSale": true,
+    "brand": "ActiveWear",
+    "categories": ["Olahraga", "Celana"],
+    "rating": 4.0,
+    "reviewCount": 91,
+    "stock": 40,
+    "images": [
+      "https://images.unsplash.com/photo-1506629905877-52a5ca6d63b1",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba94653",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba94653"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Running Shoes",
+    "description": "Sepatu lari dengan bantalan empuk untuk performa maksimal.",
+    "price": 480000,
+    "brand": "RunFast",
+    "categories": ["Sepatu", "Olahraga"],
+    "rating": 4.7,
+    "reviewCount": 145,
+    "stock": 25,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Leather Wallet",
+    "description": "Dompet kulit asli dengan slot kartu dan ruang uang yang luas.",
+    "price": 180000,
+    "flashSalePrice": 139000,
+    "isFlashSale": true,
+    "brand": "LeatherLux",
+    "categories": ["Aksesoris", "Dompet"],
+    "rating": 4.3,
+    "reviewCount": 67,
+    "stock": 38,
+    "images": [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Baseball Cap",
+    "description": "Topi baseball dengan desain modern dan bahan nyaman.",
+    "price": 95000,
+    "brand": "CapStyle",
+    "categories": ["Aksesoris", "Topi"],
+    "rating": 4.2,
+    "reviewCount": 83,
+    "stock": 50,
+    "images": [
+      "https://images.unsplash.com/photo-1575428652377-a2e80a0c0e0b",
+      "https://images.unsplash.com/photo-1575428652377-a2e80a0c0e0b"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Winter Jacket",
+    "description": "Jaket winter hangat dengan bahan waterproof dan desain trendy.",
+    "price": 420000,
+    "flashSalePrice": 349000,
+    "isFlashSale": true,
+    "brand": "WinterGear",
+    "categories": ["Pakaian", "Jaket"],
+    "rating": 4.6,
+    "reviewCount": 112,
+    "stock": 16,
+    "images": [
+      "https://images.unsplash.com/photo-1548126032-079a0fb0099d",
+      "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Yoga Pants",
+    "description": "Celana yoga dengan bahan stretch dan nyaman untuk aktivitas.",
+    "price": 210000,
+    "brand": "ActiveWear",
+    "categories": ["Olahraga", "Celana"],
+    "rating": 4.4,
+    "reviewCount": 96,
+    "stock": 32,
+    "images": [
+      "https://images.unsplash.com/photo-1506629905877-52a5ca6d63b1",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba94653"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Smart Watch",
+    "description": "Smartwatch dengan fitur kesehatan dan notifikasi smartphone.",
+    "price": 780000,
+    "flashSalePrice": 659000,
+    "isFlashSale": true,
+    "brand": "TechWear",
+    "categories": ["Elektronik", "Aksesoris"],
+    "rating": 4.8,
+    "reviewCount": 189,
+    "stock": 14,
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Backpack Travel",
+    "description": "Tas ransel travel dengan banyak kompartemen dan bahan tahan air.",
+    "price": 320000,
+    "brand": "TravelGear",
+    "categories": ["Aksesoris", "Tas"],
+    "rating": 4.5,
+    "reviewCount": 124,
+    "stock": 26,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Silk Scarf",
+    "description": "Syal sutra dengan motif elegan untuk melengkapi penampilan.",
+    "price": 145000,
+    "flashSalePrice": 119000,
+    "isFlashSale": true,
+    "brand": "FashionElite",
+    "categories": ["Aksesoris", "Syal"],
+    "rating": 4.1,
+    "reviewCount": 57,
+    "stock": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1581701549930-ba5dae466b2d",
+      "https://images.unsplash.com/photo-1581701549930-ba5dae466b2d"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Formal Shoes",
+    "description": "Sepatu formal kulit dengan sol yang nyaman untuk seharian.",
+    "price": 380000,
+    "brand": "OfficeStyle",
+    "categories": ["Sepatu", "Formal"],
+    "rating": 4.3,
+    "reviewCount": 88,
+    "stock": 19,
+    "images": [
+      "https://images.unsplash.com/photo-1607522370275-f14206abe5d3",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Swim Trunks",
+    "description": "Celana renang cepat kering dengan desain modern.",
+    "price": 175000,
+    "flashSalePrice": 139000,
+    "isFlashSale": true,
+    "brand": "SwimPro",
+    "categories": ["Olahraga", "Renang"],
+    "rating": 4.0,
+    "reviewCount": 72,
+    "stock": 36,
+    "images": [
+      "https://images.unsplash.com/photo-1506629905877-52a5ca6d63b1",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba94653"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Graphic Hoodie",
+    "description": "Hoodie dengan graphic print yang trendy dan bahan fleece nyaman.",
+    "price": 240000,
+    "brand": "StreetStyle",
+    "categories": ["Pakaian", "Hoodie"],
+    "rating": 4.2,
+    "reviewCount": 103,
+    "stock": 29,
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Polarized Sunglasses",
+    "description": "Kacamata hitam polarized dengan perlindungan UV maksimal.",
+    "price": 210000,
+    "flashSalePrice": 169000,
+    "isFlashSale": true,
+    "brand": "SunProtect",
+    "categories": ["Aksesoris", "Kacamata"],
+    "rating": 4.4,
+    "reviewCount": 91,
+    "stock": 44,
+    "images": [
+      "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Cargo Pants",
+    "description": "Celana cargo dengan banyak kantong dan bahan durable.",
+    "price": 260000,
+    "brand": "OutdoorGear",
+    "categories": ["Pakaian", "Celana"],
+    "rating": 4.1,
+    "reviewCount": 76,
+    "stock": 31,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d",
+      "https://images.unsplash.com/photo-1582418702059-97ebafb35d09"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Wireless Earbuds",
+    "description": "Earbuds nirkabel dengan noise cancellation dan battery life panjang.",
+    "price": 450000,
+    "flashSalePrice": 379000,
+    "isFlashSale": true,
+    "brand": "AudioTech",
+    "categories": ["Elektronik", "Audio"],
+    "rating": 4.7,
+    "reviewCount": 167,
+    "stock": 21,
+    "images": [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Leather Belt",
+    "description": "Sabuk kulit asli dengan buckle elegan dan adjustable.",
+    "price": 125000,
+    "brand": "LeatherLux",
+    "categories": ["Aksesoris", "Sabuk"],
+    "rating": 4.0,
+    "reviewCount": 63,
+    "stock": 48,
+    "images": [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Fitness Tracker",
+    "description": "Pelacak kebugaran dengan monitor detak jantung dan langkah.",
+    "price": 290000,
+    "flashSalePrice": 239000,
+    "isFlashSale": true,
+    "brand": "FitTech",
+    "categories": ["Elektronik", "Fitness"],
+    "rating": 4.3,
+    "reviewCount": 134,
+    "stock": 27,
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Knit Beanie",
+    "description": "Beanie rajutan hangat untuk musim dingin dengan desain simple.",
+    "price": 75000,
+    "brand": "WinterComfort",
+    "categories": ["Aksesoris", "Topi"],
+    "rating": 4.1,
+    "reviewCount": 58,
+    "stock": 52,
+    "images": [
+      "https://images.unsplash.com/photo-1575428652377-a2e80a0c0e0b",
+      "https://images.unsplash.com/photo-1575428652377-a2e80a0c0e0b"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Dress Shoes",
+    "description": "Sepatu dress kulit dengan finishing mengkilap untuk acara formal.",
+    "price": 410000,
+    "flashSalePrice": 349000,
+    "isFlashSale": true,
+    "brand": "FormalStyle",
+    "categories": ["Sepatu", "Formal"],
+    "rating": 4.5,
+    "reviewCount": 97,
+    "stock": 17,
+    "images": [
+      "https://images.unsplash.com/photo-1607522370275-f14206abe5d3",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Sports Bra",
+    "description": "Bra olahraga dengan support maksimal dan bahan breathable.",
+    "price": 135000,
+    "brand": "ActiveWear",
+    "categories": ["Olahraga", "Pakaian Dalam"],
+    "rating": 4.2,
+    "reviewCount": 89,
+    "stock": 39,
+    "images": [
+      "https://images.unsplash.com/photo-1594736797933-d0401ba94653",
+      "https://images.unsplash.com/photo-1506629905877-52a5ca6d63b1"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Canvas Tote Bag",
+    "description": "Tas tote kanvas dengan desain minimalis dan kapasitas besar.",
+    "price": 95000,
+    "flashSalePrice": 79000,
+    "isFlashSale": true,
+    "brand": "EcoBag",
+    "categories": ["Aksesoris", "Tas"],
+    "rating": 4.0,
+    "reviewCount": 71,
+    "stock": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Running Shorts",
+    "description": "Celana pendek lari dengan bahan quick-dry dan reflective details.",
+    "price": 120000,
+    "brand": "RunFast",
+    "categories": ["Olahraga", "Celana"],
+    "rating": 4.1,
+    "reviewCount": 82,
+    "stock": 33,
+    "images": [
+      "https://images.unsplash.com/photo-1506629905877-52a5ca6d63b1",
+      "https://images.unsplash.com/photo-1594736797933-d0401ba94653"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Leather Gloves",
+    "description": "Sarung tangan kulit dengan lining hangat untuk musim dingin.",
+    "price": 165000,
+    "flashSalePrice": 139000,
+    "isFlashSale": true,
+    "brand": "WinterGear",
+    "categories": ["Aksesoris", "Sarung Tangan"],
+    "rating": 4.2,
+    "reviewCount": 47,
+    "stock": 36,
+    "images": [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93",
+      "https://images.unsplash.com/photo-1627123424574-724758594e93"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Bluetooth Speaker",
+    "description": "Speaker portable dengan suara jernih dan battery tahan lama.",
+    "price": 320000,
+    "brand": "AudioTech",
+    "categories": ["Elektronik", "Audio"],
+    "rating": 4.4,
+    "reviewCount": 113,
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Cotton Socks Pack",
+    "description": "Pack 3 pasang kaos kaki katun dengan berbagai warna.",
+    "price": 65000,
+    "flashSalePrice": 49000,
+    "isFlashSale": true,
+    "brand": "ComfortWear",
+    "categories": ["Aksesoris", "Kaos Kaki"],
+    "rating": 4.0,
+    "reviewCount": 156,
+    "stock": 60,
+    "images": [
+      "https://images.unsplash.com/photo-1589487391730-58f20eb2c308",
+      "https://images.unsplash.com/photo-1589487391730-58f20eb2c308"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Yoga Mat",
+    "description": "Mat yoga anti-slip dengan carrying strap dan bahan eco-friendly.",
+    "price": 185000,
+    "brand": "ActiveWear",
+    "categories": ["Olahraga", "Fitness"],
+    "rating": 4.3,
+    "reviewCount": 94,
+    "stock": 28,
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Smartphone Case",
+    "description": "Case smartphone dengan protection drop-test dan wireless charging compatible.",
+    "price": 85000,
+    "flashSalePrice": 69000,
+    "isFlashSale": true,
+    "brand": "TechGear",
+    "categories": ["Elektronik", "Aksesoris"],
+    "rating": 4.1,
+    "reviewCount": 203,
+    "stock": 55,
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Linen Shirt",
+    "description": "Kemeja linen dengan bahan adem dan cocok untuk musim panas.",
+    "price": 195000,
+    "brand": "SummerBreeze",
+    "categories": ["Pakaian", "Kemeja"],
+    "rating": 4.2,
+    "reviewCount": 78,
+    "stock": 31,
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10",
+      "https://images.unsplash.com/photo-1506634572416-48cdfe530110"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Gym Bag",
+    "description": "Tas gym dengan kompartemen sepatu dan ventilasi untuk pakaian basah.",
+    "price": 145000,
+    "flashSalePrice": 119000,
+    "isFlashSale": true,
+    "brand": "ActiveWear",
+    "categories": ["Olahraga", "Tas"],
+    "rating": 4.0,
+    "reviewCount": 86,
+    "stock": 34,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Dress Watch",
+    "description": "Jam tangan dress dengan movement quartz dan strap kulit.",
+    "price": 280000,
+    "brand": "TimeStyle",
+    "categories": ["Aksesoris", "Jam Tangan"],
+    "rating": 4.3,
+    "reviewCount": 67,
+    "stock": 23,
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Hiking Boots",
+    "description": "Sepatu hiking waterproof dengan ankle support dan grip kuat.",
+    "price": 520000,
+    "flashSalePrice": 449000,
+    "isFlashSale": true,
+    "brand": "OutdoorGear",
+    "categories": ["Sepatu", "Outdoor"],
+    "rating": 4.6,
+    "reviewCount": 124,
+    "stock": 19,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Silk Blouse",
+    "description": "Blouse sutra dengan cut elegan dan cocok untuk formal occasion.",
+    "price": 230000,
+    "brand": "FashionElite",
+    "categories": ["Pakaian", "Blouse"],
+    "rating": 4.4,
+    "reviewCount": 92,
+    "stock": 26,
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10",
+      "https://images.unsplash.com/photo-1506634572416-48cdfe530110"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Wireless Mouse",
+    "description": "Mouse nirkabel ergonomis dengan precision sensor dan battery hemat.",
+    "price": 175000,
+    "flashSalePrice": 149000,
+    "isFlashSale": true,
+    "brand": "TechGear",
+    "categories": ["Elektronik", "Computer"],
+    "rating": 4.2,
+    "reviewCount": 145,
+    "stock": 41,
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Knit Cardigan",
+    "description": "Cardigan rajutan dengan button front dan bahan soft touch.",
+    "price": 210000,
+    "brand": "ComfortWear",
+    "categories": ["Pakaian", "Cardigan"],
+    "rating": 4.1,
+    "reviewCount": 73,
+    "stock": 29,
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Portable Charger",
+    "description": "Power bank kapasitas tinggi dengan fast charging technology.",
+    "price": 195000,
+    "flashSalePrice": 159000,
+    "isFlashSale": true,
+    "brand": "TechGear",
+    "categories": ["Elektronik", "Charger"],
+    "rating": 4.5,
+    "reviewCount": 189,
+    "stock": 32,
+    "images": [
+      "https://images.unsplash.com/photo-1598935898639-81586e9f8a3e",
+      "https://images.unsplash.com/photo-1598935898639-81586e9f8a3e"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Polo Shirt",
+    "description": "Kemeja polo dengan bahan pique dan logo embroidery.",
+    "price": 165000,
+    "brand": "CasualStyle",
+    "categories": ["Pakaian", "Polo"],
+    "rating": 4.0,
+    "reviewCount": 97,
+    "stock": 37,
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10",
+      "https://images.unsplash.com/photo-1506634572416-48cdfe530110"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Desk Lamp",
+    "description": "Lampu meja LED dengan adjustable brightness dan USB charging port.",
+    "price": 145000,
+    "flashSalePrice": 119000,
+    "isFlashSale": true,
+    "brand": "HomeTech",
+    "categories": ["Elektronik", "Home"],
+    "rating": 4.3,
+    "reviewCount": 84,
+    "stock": 25,
+    "images": [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Maxi Dress",
+    "description": "Gaun maxi flowy dengan pattern bohemian dan bahan chiffon.",
+    "price": 275000,
+    "brand": "BohoStyle",
+    "categories": ["Pakaian", "Gaun"],
+    "rating": 4.2,
+    "reviewCount": 68,
+    "stock": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Gaming Headset",
+    "description": "Headset gaming dengan surround sound dan microphone noise-cancelling.",
+    "price": 380000,
+    "flashSalePrice": 319000,
+    "isFlashSale": true,
+    "brand": "GameTech",
+    "categories": ["Elektronik", "Gaming"],
+    "rating": 4.6,
+    "reviewCount": 156,
+    "stock": 18,
+    "images": [
+      "https://images.unsplash.com/photo-1599669454699-248893623464",
+      "https://images.unsplash.com/photo-1599669454699-248893623464"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Canvas Sneakers",
+    "description": "Sepatu sneakers kanvas dengan vulcanized sole dan desain casual.",
+    "price": 195000,
+    "brand": "FootStyle",
+    "categories": ["Sepatu", "Sneakers"],
+    "rating": 4.1,
+    "reviewCount": 112,
+    "stock": 43,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Stainless Water Bottle",
+    "description": "Botol air stainless steel dengan insulation 24 jam dan leak proof.",
+    "price": 125000,
+    "flashSalePrice": 99000,
+    "isFlashSale": true,
+    "brand": "EcoGear",
+    "categories": ["Aksesoris", "Botol"],
+    "rating": 4.4,
+    "reviewCount": 203,
+    "stock": 51,
+    "images": [
+      "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+      "https://images.unsplash.com/photo-1602143407151-7111542de6e8"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Leather Journal",
+    "description": "Jurnal kulit dengan kertas premium dan elastic closure.",
+    "price": 95000,
+    "brand": "WriteStyle",
+    "categories": ["Aksesoris", "Stationery"],
+    "rating": 4.0,
+    "reviewCount": 89,
+    "stock": 38,
+    "images": [
+      "https://images.unsplash.com/photo-1531346878377-a5be20888e57",
+      "https://images.unsplash.com/photo-1531346878377-a5be20888e57"
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+part of 'app_pages.dart';
+
+/// used to switch pages
+class Routes {
+  static const home = _Paths.home;
+  // static const login = _Paths.login;
+  static const splash = _Paths.splash;
+  static const intro = _Paths.intro;
+  static const productdetail = _Paths.productdetail;
+  // static const welcome = _Paths.welcome;
+}
+
+/// contains a list of route names.
+// made separately to make it easier to manage route naming
+class _Paths {
+  static const home = '/';
+  static const splash = '/splash';
+  static const intro = '/intro';
+  static const productdetail = '/Productdetail';
+
+  // Example :
+  // static const index = '/';
+  // static const splash = '/splash';
+  // static const product = '/product';
+}
