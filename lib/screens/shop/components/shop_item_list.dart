@@ -9,7 +9,7 @@ class ShopItemList extends StatefulWidget {
   final Product product;
   final VoidCallback onRemove;
 
-  ShopItemList(this.product, {required this.onRemove});
+  const ShopItemList(this.product, {super.key, required this.onRemove});
 
   @override
   _ShopItemListState createState() => _ShopItemListState();

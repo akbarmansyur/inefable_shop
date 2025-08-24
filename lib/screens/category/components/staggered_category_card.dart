@@ -7,6 +7,7 @@ class CategoryCard extends StatelessWidget {
   final String assetPath;
 
   CategoryCard({
+    super.key,
     required this.controller,
     required this.begin,
     required this.end,
@@ -103,6 +104,7 @@ class StaggeredCardCard extends StatefulWidget {
   final String assetPath;
 
   const StaggeredCardCard({
+    super.key,
     required this.begin,
     required this.end,
     required this.categoryName,

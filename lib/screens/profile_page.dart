@@ -7,6 +7,8 @@ import 'package:inefable_shop/screens/tracking_page.dart';
 import 'package:inefable_shop/screens/wallet/wallet_page.dart';
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -9,6 +9,8 @@ import 'package:inefable_shop/screens/request_money/request_amount_page.dart';
 import '../../app_properties.dart';
 
 class RequestPage extends StatefulWidget {
+  const RequestPage({super.key});
+
   @override
   _RequestPageState createState() => _RequestPageState();
 }
@@ -107,7 +109,7 @@ class _RequestPageState extends State<RequestPage> {
             ),
             Expanded(
               child: Center(
-                child: frequentUsers.length == 0
+                child: frequentUsers.isEmpty
                     ? CupertinoActivityIndicator()
                     : Container(
                         height: 150,
@@ -157,9 +159,7 @@ class _RequestPageState extends State<RequestPage> {
                                             0.0,
                                           ),
                                           child: Text(
-                                            user.name.first +
-                                                ' ' +
-                                                user.name.last,
+                                            '${user.name.first} ${user.name.last}',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(fontSize: 14.0),
                                           ),
@@ -191,7 +191,7 @@ class _RequestPageState extends State<RequestPage> {
             Expanded(
               flex: 2,
               child: Center(
-                child: users.length == 0
+                child: users.isEmpty
                     ? CupertinoActivityIndicator()
                     : Container(
                         color: Colors.white,
@@ -232,9 +232,7 @@ class _RequestPageState extends State<RequestPage> {
                                                   top: 16.0,
                                                 ),
                                                 child: Text(
-                                                  user.name.first +
-                                                      ' ' +
-                                                      user.name.last,
+                                                  '${user.name.first} ${user.name.last}',
                                                   style: TextStyle(
                                                     fontSize: 16.0,
                                                     fontWeight: FontWeight.bold,

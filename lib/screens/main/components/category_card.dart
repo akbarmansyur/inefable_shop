@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/models/category.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;
 
-  const CategoryCard({required this.category});
+  const CategoryCard({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CategoryCard extends StatelessWidget {
                 width: 90,
                 padding: EdgeInsets.all(8.0),
                 child: Center(
-                  child: Text(category.category, textAlign: TextAlign.right),
+                  child: Text(category.name, textAlign: TextAlign.right),
                 ),
               ),
               Container(
@@ -29,7 +30,7 @@ class CategoryCard extends StatelessWidget {
                 width: 90,
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
-                    colors: [category.begin, category.end],
+                    colors: [yellow, yellow],
                     center: Alignment(0, 0),
                     radius: 0.8,
                     focal: Alignment(0, 0),
@@ -37,7 +38,7 @@ class CategoryCard extends StatelessWidget {
                   ),
                 ),
                 padding: EdgeInsets.all(8.0),
-                child: Center(child: Image.asset(category.image)),
+                child: Center(child: Image.asset(category.imageUrl ?? "")),
               ),
             ],
           ),

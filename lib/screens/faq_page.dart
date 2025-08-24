@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class FaqPage extends StatefulWidget {
+  const FaqPage({super.key});
+
   @override
   _FaqPageState createState() => _FaqPageState();
 }
@@ -74,30 +76,28 @@ class _FaqPageState extends State<FaqPage> {
                   ),
                 ),
               ),
-              ...panels
-                  .map(
-                    (panel) => ExpansionTile(
-                      title: Text(
-                        panel.title,
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(16.0),
-                          color: Color(0xffFAF1E2),
-                          child: Text(
-                            panel.content,
-                            style: TextStyle(color: Colors.grey, fontSize: 12),
-                          ),
-                        ),
-                      ],
+              ...panels.map(
+                (panel) => ExpansionTile(
+                  title: Text(
+                    panel.title,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[600],
                     ),
-                  )
-                  .toList(),
+                  ),
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16.0),
+                      color: Color(0xffFAF1E2),
+                      child: Text(
+                        panel.content,
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

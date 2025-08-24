@@ -5,6 +5,8 @@ import 'package:inefable_shop/screens/intro_page.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
 class ConfirmOtpPage extends StatefulWidget {
+  const ConfirmOtpPage({super.key});
+
   @override
   _ConfirmOtpPageState createState() => _ConfirmOtpPageState();
 }
@@ -80,17 +82,6 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
         child: Container(
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
-          child: Center(
-            child: new Text(
-              "Verify",
-              style: const TextStyle(
-                color: const Color(0xfffefefe),
-                fontWeight: FontWeight.w600,
-                fontStyle: FontStyle.normal,
-                fontSize: 20.0,
-              ),
-            ),
-          ),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -109,6 +100,17 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
               ),
             ],
             borderRadius: BorderRadius.circular(9.0),
+          ),
+          child: Center(
+            child: new Text(
+              "Verify",
+              style: const TextStyle(
+                color: const Color(0xfffefefe),
+                fontWeight: FontWeight.w600,
+                fontStyle: FontStyle.normal,
+                fontSize: 20.0,
+              ),
+            ),
           ),
         ),
       ),
@@ -155,7 +157,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
     );
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
+      onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -183,7 +185,7 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
                         padding: const EdgeInsets.only(right: 28.0),
                         child: Center(
                           child: PinCodeTextField(
-                            controller: new TextEditingController(),
+                            controller: TextEditingController(),
                             highlightColor: Colors.white,
                             highlightAnimation: true,
                             highlightAnimationBeginColor: Colors.white,

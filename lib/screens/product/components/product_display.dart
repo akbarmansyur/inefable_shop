@@ -1,10 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/controller/product_controller.dart';
-import 'package:inefable_shop/models/product_model.dart';
-import 'package:inefable_shop/screens/rating/rating_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ProductDisplay extends StatelessWidget {

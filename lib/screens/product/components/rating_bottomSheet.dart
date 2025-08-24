@@ -3,6 +3,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class RatingBottomSheet extends StatefulWidget {
+  const RatingBottomSheet({super.key});
+
   @override
   _RatingBottomSheetState createState() => _RatingBottomSheetState();
 }
@@ -109,122 +111,115 @@ class _RatingBottomSheetState extends State<RatingBottomSheet> {
           ),
           Column(
             children: <Widget>[
-              ...ratings
-                  .map(
-                    (val) => Container(
-                      margin: const EdgeInsets.symmetric(vertical: 4.0),
-                      padding: const EdgeInsets.all(8.0),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+              ...ratings.map(
+                (val) => Container(
+                  margin: const EdgeInsets.symmetric(vertical: 4.0),
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: CircleAvatar(
+                          maxRadius: 14,
+                          backgroundImage: AssetImage('assets/background.jpg'),
+                        ),
                       ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(right: 16.0),
-                            child: CircleAvatar(
-                              maxRadius: 14,
-                              backgroundImage: AssetImage(
-                                'assets/background.jpg',
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Text(
-                                      'Billy Holand',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      '10 am, Via iOS',
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 10.0,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 8.0,
-                                  ),
-                                  child: RatingBar(
-                                    ignoreGestures: true,
-                                    itemSize: 20,
-                                    allowHalfRating: true,
-                                    initialRating: val.toDouble(),
-                                    itemPadding: EdgeInsets.symmetric(
-                                      horizontal: 4.0,
-                                    ),
-                                    ratingWidget: RatingWidget(
-                                      empty: Icon(
-                                        Icons.favorite_border,
-                                        color: Color(0xffFF8993),
-                                        size: 20,
-                                      ),
-                                      full: Icon(
-                                        Icons.favorite,
-                                        color: Color(0xffFF8993),
-                                        size: 20,
-                                      ),
-                                      half: SizedBox(),
-                                    ),
-                                    onRatingUpdate: (value) {
-                                      setState(() {
-                                        rating = value;
-                                      });
-                                      print(value);
-                                    },
-                                  ),
+                                Text(
+                                  'Billy Holand',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                                 Text(
-                                  'Not as I expected! ... I`m really sad',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 16.0,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: <Widget>[
-                                      Text(
-                                        '21 likes',
-                                        style: TextStyle(
-                                          color: Colors.grey[400],
-                                          fontSize: 10.0,
-                                        ),
-                                      ),
-                                      Text(
-                                        '1 Comment',
-                                        style: TextStyle(
-                                          color: Colors.blue,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 10.0,
-                                        ),
-                                      ),
-                                    ],
+                                  '10 am, Via iOS',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 10.0,
                                   ),
                                 ),
                               ],
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 8.0,
+                              ),
+                              child: RatingBar(
+                                ignoreGestures: true,
+                                itemSize: 20,
+                                allowHalfRating: true,
+                                initialRating: val.toDouble(),
+                                itemPadding: EdgeInsets.symmetric(
+                                  horizontal: 4.0,
+                                ),
+                                ratingWidget: RatingWidget(
+                                  empty: Icon(
+                                    Icons.favorite_border,
+                                    color: Color(0xffFF8993),
+                                    size: 20,
+                                  ),
+                                  full: Icon(
+                                    Icons.favorite,
+                                    color: Color(0xffFF8993),
+                                    size: 20,
+                                  ),
+                                  half: SizedBox(),
+                                ),
+                                onRatingUpdate: (value) {
+                                  setState(() {
+                                    rating = value;
+                                  });
+                                  print(value);
+                                },
+                              ),
+                            ),
+                            Text(
+                              'Not as I expected! ... I`m really sad',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 16.0,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text(
+                                    '21 likes',
+                                    style: TextStyle(
+                                      color: Colors.grey[400],
+                                      fontSize: 10.0,
+                                    ),
+                                  ),
+                                  Text(
+                                    '1 Comment',
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 10.0,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                  .toList(),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ],

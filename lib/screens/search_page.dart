@@ -6,6 +6,8 @@ import 'package:inefable_shop/screens/product/view_product_page.dart';
 import 'package:rubber/rubber.dart';
 
 class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
+
   @override
   _SearchPageState createState() => _SearchPageState();
 }
@@ -72,11 +74,6 @@ class _SearchPageState extends State<SearchPage>
     super.initState();
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   void _expand() {
     _controller.expand();
   }
@@ -115,11 +112,11 @@ class _SearchPageState extends State<SearchPage>
               onChanged: (value) {
                 if (value.isNotEmpty) {
                   List<Product> tempList = [];
-                  products.forEach((product) {
+                  for (var product in products) {
                     if (product.name.toLowerCase().contains(value)) {
                       tempList.add(product);
                     }
-                  });
+                  }
                   setState(() {
                     searchResults.clear();
                     searchResults.addAll(tempList);
@@ -218,7 +215,7 @@ class _SearchPageState extends State<SearchPage>
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: 50,
             child: ListView.builder(
               itemBuilder: (_, index) => Center(
@@ -255,7 +252,7 @@ class _SearchPageState extends State<SearchPage>
               scrollDirection: Axis.horizontal,
             ),
           ),
-          Container(
+          SizedBox(
             height: 50,
             child: ListView.builder(
               itemBuilder: (_, index) => Center(
@@ -292,7 +289,7 @@ class _SearchPageState extends State<SearchPage>
               scrollDirection: Axis.horizontal,
             ),
           ),
-          Container(
+          SizedBox(
             height: 50,
             child: ListView.builder(
               itemBuilder: (_, index) => Center(

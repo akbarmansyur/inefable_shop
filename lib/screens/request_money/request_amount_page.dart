@@ -7,7 +7,7 @@ import 'package:inefable_shop/screens/request_money/receive_page.dart';
 class RequestAmountPage extends StatelessWidget {
   final User user;
 
-  RequestAmountPage(this.user);
+  const RequestAmountPage(this.user, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class RequestAmountPage extends StatelessWidget {
           child: Text(
             "Request Now",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 16.0,
@@ -66,7 +66,7 @@ class RequestAmountPage extends StatelessWidget {
           child: Text(
             "QR Code",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 16.0,
@@ -122,7 +122,7 @@ class RequestAmountPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    user.name.first + ' ' + user.name.last,
+                                    '${user.name.first} ${user.name.last}',
                                     style: TextStyle(
                                       color: Colors.white54,
                                       fontSize: 16,
@@ -165,9 +165,7 @@ class RequestAmountPage extends StatelessWidget {
                                   fontSize: 48,
                                 ),
                                 enabledBorder: const UnderlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: Colors.white,
-                                  ),
+                                  borderSide: BorderSide(color: Colors.white),
                                 ),
                               ),
                             ),

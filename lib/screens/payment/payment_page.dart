@@ -6,6 +6,8 @@ import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/screens/product/components/color_list.dart';
 
 class PaymentPage extends StatefulWidget {
+  const PaymentPage({super.key});
+
   @override
   _PaymentPageState createState() => _PaymentPageState();
 }
@@ -41,10 +43,11 @@ class _PaymentPageState extends State<PaymentPage> {
   }
 
   String convertMonthYear(String month, String year) {
-    if (month.isNotEmpty)
-      return month + '/' + year;
-    else
+    if (month.isNotEmpty) {
+      return '$month/$year';
+    } else {
       return '';
+    }
   }
 
   @override
@@ -70,7 +73,7 @@ class _PaymentPageState extends State<PaymentPage> {
           child: Text(
             "Add This Card",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,
@@ -198,11 +201,11 @@ class _PaymentPageState extends State<PaymentPage> {
                                       });
                                     },
                                     child: Transform.scale(
+                                      scale: active == c ? 1.2 : 1,
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: ColorOption(c ?? Colors.red),
                                       ),
-                                      scale: active == c ? 1.2 : 1,
                                     ),
                                   ),
                                 )

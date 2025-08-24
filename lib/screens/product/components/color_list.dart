@@ -4,7 +4,7 @@ import 'package:inefable_shop/app_properties.dart';
 class ColorList extends StatefulWidget {
   final List<Color> colorList;
 
-  ColorList(this.colorList);
+  const ColorList(this.colorList, {super.key});
 
   @override
   _ColorListState createState() => _ColorListState();
@@ -64,7 +64,7 @@ class _ColorListState extends State<ColorList> {
 class ColorOption extends StatelessWidget {
   final Color color;
 
-  const ColorOption(this.color);
+  const ColorOption(this.color, {super.key});
 
   @override
   Widget build(BuildContext context) {

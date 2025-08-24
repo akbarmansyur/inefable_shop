@@ -4,6 +4,8 @@ import 'package:inefable_shop/screens/address/address_form.dart';
 import 'package:inefable_shop/screens/select_card_page.dart';
 
 class AddAddressPage extends StatelessWidget {
+  const AddAddressPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     Widget finishButton = InkWell(
@@ -28,7 +30,7 @@ class AddAddressPage extends StatelessWidget {
           child: Text(
             "Finish",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,

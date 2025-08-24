@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class ChangeLanguagePage extends StatefulWidget {
+  const ChangeLanguagePage({super.key});
+
   @override
   _ChangeCountryPageState createState() => _ChangeCountryPageState();
 }

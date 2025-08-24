@@ -9,6 +9,8 @@ import 'package:inefable_shop/screens/send_money/quick_send_amount_page.dart';
 import '../../app_properties.dart';
 
 class SendPage extends StatefulWidget {
+  const SendPage({super.key});
+
   @override
   _SendPageState createState() => _SendPageState();
 }
@@ -93,7 +95,7 @@ class _SendPageState extends State<SendPage> {
                     vertical: 8.0,
                   ),
                   child: Center(
-                    child: frequentUsers.length == 0
+                    child: frequentUsers.isEmpty
                         ? CupertinoActivityIndicator()
                         : ListView(
                             scrollDirection: Axis.horizontal,
@@ -138,9 +140,7 @@ class _SendPageState extends State<SendPage> {
                                               0.0,
                                             ),
                                             child: Text(
-                                              user.name.first +
-                                                  ' ' +
-                                                  user.name.last,
+                                              '${user.name.first} ${user.name.last}',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(fontSize: 14.0),
                                             ),
@@ -173,7 +173,7 @@ class _SendPageState extends State<SendPage> {
             Expanded(
               flex: 2,
               child: Center(
-                child: users.length == 0
+                child: users.isEmpty
                     ? CupertinoActivityIndicator()
                     : Container(
                         color: Colors.white,
@@ -214,9 +214,7 @@ class _SendPageState extends State<SendPage> {
                                                   top: 16.0,
                                                 ),
                                                 child: Text(
-                                                  user.name.first +
-                                                      ' ' +
-                                                      user.name.last,
+                                                  '${user.name.first} ${user.name.last}',
                                                   style: TextStyle(
                                                     fontSize: 16.0,
                                                     fontWeight: FontWeight.bold,

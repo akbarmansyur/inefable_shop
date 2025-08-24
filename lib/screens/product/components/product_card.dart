@@ -4,7 +4,7 @@ import 'package:inefable_shop/models/product.dart';
 class ProductCard extends StatelessWidget {
   final Product product;
 
-  ProductCard(this.product);
+  const ProductCard(this.product, {super.key});
 
   @override
   Widget build(BuildContext context) {

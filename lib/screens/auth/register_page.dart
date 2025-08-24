@@ -4,6 +4,8 @@ import 'package:inefable_shop/app_properties.dart';
 import 'forgot_password_page.dart';
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -55,17 +57,6 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Container(
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
-          child: Center(
-            child: new Text(
-              "Register",
-              style: const TextStyle(
-                color: const Color(0xfffefefe),
-                fontWeight: FontWeight.w600,
-                fontStyle: FontStyle.normal,
-                fontSize: 20.0,
-              ),
-            ),
-          ),
           decoration: BoxDecoration(
             gradient: mainButton,
             boxShadow: [
@@ -77,11 +68,22 @@ class _RegisterPageState extends State<RegisterPage> {
             ],
             borderRadius: BorderRadius.circular(9.0),
           ),
+          child: Center(
+            child: new Text(
+              "Register",
+              style: const TextStyle(
+                color: const Color(0xfffefefe),
+                fontWeight: FontWeight.w600,
+                fontStyle: FontStyle.normal,
+                fontSize: 20.0,
+              ),
+            ),
+          ),
         ),
       ),
     );
 
-    Widget registerForm = Container(
+    Widget registerForm = SizedBox(
       height: 300,
       child: Stack(
         children: <Widget>[

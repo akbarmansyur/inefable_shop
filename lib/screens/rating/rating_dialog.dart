@@ -35,7 +35,7 @@ class RatingDialog extends StatelessWidget {
           child: Text(
             "Pay Now",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,

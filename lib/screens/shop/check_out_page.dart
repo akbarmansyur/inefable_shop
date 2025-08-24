@@ -8,6 +8,8 @@ import 'components/credit_card.dart';
 import 'components/shop_item_list.dart';
 
 class CheckOutPage extends StatefulWidget {
+  const CheckOutPage({super.key});
+
   @override
   _CheckOutPageState createState() => _CheckOutPageState();
 }
@@ -60,7 +62,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
           child: Text(
             "Check Out",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,
@@ -117,7 +119,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                         ),
                       ),
                       Text(
-                        products.length.toString() + ' items',
+                        '${products.length} items',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

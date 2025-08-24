@@ -6,6 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class NotificationSettingsPage extends StatefulWidget {
+  const NotificationSettingsPage({super.key});
+
   @override
   _NotificationSettingsPageState createState() =>
       _NotificationSettingsPageState();
@@ -27,7 +29,7 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
           });
         },
         value: true,
-        activeColor: yellow,
+        activeTrackColor: yellow,
       );
     } else {
       return Switch(

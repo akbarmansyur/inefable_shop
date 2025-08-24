@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/controller/product_controller.dart';
-import 'package:inefable_shop/models/product_model.dart';
-import 'package:inefable_shop/screens/search_page.dart';
 
 import 'components/product_display.dart';
-import 'view_product_page.dart';
 
 class ProductPage extends StatefulWidget {
   // final Product product;

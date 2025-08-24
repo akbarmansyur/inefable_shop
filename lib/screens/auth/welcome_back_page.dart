@@ -4,6 +4,8 @@ import 'package:inefable_shop/app_properties.dart';
 import 'register_page.dart';
 
 class WelcomeBackPage extends StatefulWidget {
+  const WelcomeBackPage({super.key});
+
   @override
   _WelcomeBackPageState createState() => _WelcomeBackPageState();
 }
@@ -53,17 +55,6 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
         child: Container(
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
-          child: Center(
-            child: new Text(
-              "Log In",
-              style: const TextStyle(
-                color: const Color(0xfffefefe),
-                fontWeight: FontWeight.w600,
-                fontStyle: FontStyle.normal,
-                fontSize: 20.0,
-              ),
-            ),
-          ),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -83,11 +74,22 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
             ],
             borderRadius: BorderRadius.circular(9.0),
           ),
+          child: Center(
+            child: new Text(
+              "Log In",
+              style: const TextStyle(
+                color: const Color(0xfffefefe),
+                fontWeight: FontWeight.w600,
+                fontStyle: FontStyle.normal,
+                fontSize: 20.0,
+              ),
+            ),
+          ),
         ),
       ),
     );
 
-    Widget loginForm = Container(
+    Widget loginForm = SizedBox(
       height: 240,
       child: Stack(
         children: <Widget>[

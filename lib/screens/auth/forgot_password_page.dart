@@ -3,6 +3,8 @@ import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/screens/auth/confirm_otp_page.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
+  const ForgotPasswordPage({super.key});
+
   @override
   _ForgotPasswordPageState createState() => _ForgotPasswordPageState();
 }
@@ -61,17 +63,6 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         child: Container(
           width: MediaQuery.of(context).size.width / 2,
           height: 80,
-          child: Center(
-            child: new Text(
-              "Send OTP",
-              style: const TextStyle(
-                color: const Color(0xfffefefe),
-                fontWeight: FontWeight.w600,
-                fontStyle: FontStyle.normal,
-                fontSize: 20.0,
-              ),
-            ),
-          ),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -91,11 +82,22 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             ],
             borderRadius: BorderRadius.circular(9.0),
           ),
+          child: Center(
+            child: new Text(
+              "Send OTP",
+              style: const TextStyle(
+                color: const Color(0xfffefefe),
+                fontWeight: FontWeight.w600,
+                fontStyle: FontStyle.normal,
+                fontSize: 20.0,
+              ),
+            ),
+          ),
         ),
       ),
     );
 
-    Widget phoneForm = Container(
+    Widget phoneForm = SizedBox(
       height: 210,
       child: Stack(
         children: <Widget>[
@@ -159,7 +161,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       ),
     );
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
+      onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

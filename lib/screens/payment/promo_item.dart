@@ -5,6 +5,8 @@ import 'package:inefable_shop/screens/product/components/color_list.dart';
 import 'package:inefable_shop/screens/product/components/shop_product.dart';
 
 class PromoItem extends StatelessWidget {
+  const PromoItem({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

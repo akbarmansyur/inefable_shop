@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class ChangePasswordPage extends StatefulWidget {
+  const ChangePasswordPage({super.key});
+
   @override
   _ChangePasswordPageState createState() => _ChangePasswordPageState();
 }
@@ -34,7 +36,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           child: Text(
             "Confirm Change",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,

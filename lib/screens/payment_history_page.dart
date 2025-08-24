@@ -5,6 +5,8 @@ import 'package:inefable_shop/api_service.dart';
 import 'package:inefable_shop/models/user.dart';
 
 class PaymentHistoryPage extends StatefulWidget {
+  const PaymentHistoryPage({super.key});
+
   @override
   _PaymentHistoryPageState createState() => _PaymentHistoryPageState();
 }
@@ -101,167 +103,154 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
               Flexible(
                 child: ListView(
                   children: [
-                    ...dates
-                        .map(
-                          (date) => Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Text(
-                                  date,
-                                  style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                    ...dates.map(
+                      (date) => Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              date,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
                               ),
-                              Center(
-                                child: users.length == 0
-                                    ? CupertinoActivityIndicator()
-                                    : Container(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 16.0,
-                                          vertical: 8.0,
-                                        ),
-                                        color: Colors.white,
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: users
-                                              .map(
-                                                (user) => Column(
+                            ),
+                          ),
+                          Center(
+                            child: users.isEmpty
+                                ? CupertinoActivityIndicator()
+                                : Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0,
+                                      vertical: 8.0,
+                                    ),
+                                    color: Colors.white,
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: users
+                                          .map(
+                                            (user) => Column(
+                                              children: <Widget>[
+                                                Row(
                                                   children: <Widget>[
-                                                    Row(
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                            right: 16.0,
+                                                          ),
+                                                      child: CircleAvatar(
+                                                        maxRadius: 24,
+                                                        backgroundImage:
+                                                            NetworkImage(
+                                                              user
+                                                                  .picture
+                                                                  .thumbnail,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                    Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
                                                       children: <Widget>[
                                                         Padding(
                                                           padding:
                                                               const EdgeInsets.only(
-                                                                right: 16.0,
+                                                                top: 16.0,
                                                               ),
-                                                          child: CircleAvatar(
-                                                            maxRadius: 24,
-                                                            backgroundImage:
-                                                                NetworkImage(
-                                                                  user
-                                                                      .picture
-                                                                      .thumbnail,
-                                                                ),
+                                                          child: Text(
+                                                            '${user.name.first} ${user.name.last}',
+                                                            style: TextStyle(
+                                                              fontSize: 16.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
                                                           ),
                                                         ),
-                                                        Column(
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets.only(
+                                                                top: 8.0,
+                                                                bottom: 16.0,
+                                                              ),
+                                                          child: Text(
+                                                            user.phone,
+                                                          ),
+                                                        ),
+                                                        Text(
+                                                          'Request',
+                                                          style: TextStyle(
+                                                            fontSize: 10.0,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Spacer(),
+                                                    Column(
+                                                      children: <Widget>[
+                                                        Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.min,
                                                           crossAxisAlignment:
                                                               CrossAxisAlignment
                                                                   .start,
                                                           children: <Widget>[
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets.only(
-                                                                    top: 16.0,
-                                                                  ),
-                                                              child: Text(
-                                                                user
-                                                                        .name
-                                                                        .first +
-                                                                    ' ' +
-                                                                    user
-                                                                        .name
-                                                                        .last,
-                                                                style: TextStyle(
-                                                                  fontSize:
-                                                                      16.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets.only(
-                                                                    top: 8.0,
-                                                                    bottom:
-                                                                        16.0,
-                                                                  ),
-                                                              child: Text(
-                                                                user.phone,
-                                                              ),
-                                                            ),
                                                             Text(
-                                                              'Request',
+                                                              '\$ ',
                                                               style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
                                                                 fontSize: 10.0,
                                                               ),
                                                             ),
-                                                          ],
-                                                        ),
-                                                        Spacer(),
-                                                        Column(
-                                                          children: <Widget>[
-                                                            Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .min,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: <Widget>[
-                                                                Text(
-                                                                  '\$ ',
-                                                                  style: TextStyle(
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                    fontSize:
-                                                                        10.0,
-                                                                  ),
-                                                                ),
-                                                                Text(
-                                                                  '90.00',
-                                                                  style: TextStyle(
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets.symmetric(
-                                                                    vertical:
-                                                                        8.0,
-                                                                  ),
-                                                              child: Text(
-                                                                '2:00 am',
-                                                                style: TextStyle(
-                                                                  fontSize: 12,
-                                                                  color: Colors
-                                                                      .grey,
-                                                                ),
+                                                            Text(
+                                                              '90.00',
+                                                              style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
                                                               ),
                                                             ),
                                                           ],
                                                         ),
-                                                      ],
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                            left: 64.0,
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets.symmetric(
+                                                                vertical: 8.0,
+                                                              ),
+                                                          child: Text(
+                                                            '2:00 am',
+                                                            style: TextStyle(
+                                                              fontSize: 12,
+                                                              color:
+                                                                  Colors.grey,
+                                                            ),
                                                           ),
-                                                      child: Divider(),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ],
                                                 ),
-                                              )
-                                              .toList(),
-                                        ),
-                                      ),
-                              ),
-                            ],
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                        left: 64.0,
+                                                      ),
+                                                  child: Divider(),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                          .toList(),
+                                    ),
+                                  ),
                           ),
-                        )
-                        .toList(),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

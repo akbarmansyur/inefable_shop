@@ -10,6 +10,8 @@ import 'package:inefable_shop/screens/request_money/request_page.dart';
 import 'package:inefable_shop/screens/send_money/send_page.dart';
 
 class WalletPage extends StatefulWidget {
+  const WalletPage({super.key});
+
   @override
   _WalletPageState createState() => _WalletPageState();
 }
@@ -170,12 +172,13 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                                 animController.addListener(() {
                                   setState(() {});
                                 });
-                                if (openOptions.value == 300)
+                                if (openOptions.value == 300) {
                                   animController.reverse();
-                                else
+                                } else {
                                   animController.forward();
+                                }
                               },
-                              child: Container(
+                              child: SizedBox(
                                 width: 110,
                                 height: 110,
                                 child: Center(
@@ -207,7 +210,7 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                   ),
                   Flexible(
                     child: Center(
-                      child: users.length == 0
+                      child: users.isEmpty
                           ? CupertinoActivityIndicator()
                           : Container(
                               height: 150,
@@ -236,77 +239,69 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                                       ),
                                     ),
                                   ),
-                                  ...users
-                                      .map(
-                                        (user) => InkWell(
-                                          onTap: () =>
-                                              Navigator.of(context).push(
-                                                MaterialPageRoute(
-                                                  builder: (_) =>
-                                                      RequestAmountPage(user),
-                                                ),
-                                              ),
-                                          child: Container(
-                                            width: 100,
-                                            height: 200,
-                                            margin: const EdgeInsets.only(
-                                              left: 8.0,
-                                              right: 8.0,
-                                            ),
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.all(
-                                                Radius.circular(5),
-                                              ),
-                                            ),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                CircleAvatar(
-                                                  maxRadius: 24,
-                                                  backgroundImage: NetworkImage(
-                                                    user.picture.thumbnail,
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.fromLTRB(
-                                                        4.0,
-                                                        16.0,
-                                                        4.0,
-                                                        0.0,
-                                                      ),
-                                                  child: Text(
-                                                    user.name.first +
-                                                        ' ' +
-                                                        user.name.last,
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      fontSize: 14.0,
-                                                    ),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                        top: 8.0,
-                                                      ),
-                                                  child: Text(
-                                                    user.phone,
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      fontSize: 10,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
+                                  ...users.map(
+                                    (user) => InkWell(
+                                      onTap: () => Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (_) =>
+                                              RequestAmountPage(user),
+                                        ),
+                                      ),
+                                      child: Container(
+                                        width: 100,
+                                        height: 200,
+                                        margin: const EdgeInsets.only(
+                                          left: 8.0,
+                                          right: 8.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(5),
                                           ),
                                         ),
-                                      )
-                                      .toList(),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            CircleAvatar(
+                                              maxRadius: 24,
+                                              backgroundImage: NetworkImage(
+                                                user.picture.thumbnail,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.fromLTRB(
+                                                    4.0,
+                                                    16.0,
+                                                    4.0,
+                                                    0.0,
+                                                  ),
+                                              child: Text(
+                                                '${user.name.first} ${user.name.last}',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontSize: 14.0,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 8.0,
+                                              ),
+                                              child: Text(
+                                                user.phone,
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(fontSize: 10),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class AddAddressForm extends StatelessWidget {
+  const AddAddressForm({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

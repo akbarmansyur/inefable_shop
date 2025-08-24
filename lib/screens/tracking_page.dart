@@ -4,6 +4,8 @@ import 'package:inefable_shop/app_properties.dart';
 import 'package:intl/intl.dart';
 
 class TrackingPage extends StatefulWidget {
+  const TrackingPage({super.key});
+
   @override
   _TrackingPageState createState() => _TrackingPageState();
 }
@@ -133,27 +135,22 @@ class _TrackingPageState extends State<TrackingPage> {
                         child: Stepper(
                           //                          physics: NeverScrollableScrollPhysics(),
                           steps: [
-                            ...locations
-                                .map(
-                                  (location) => Step(
-                                    isActive:
-                                        location.isHere || location.passed,
-                                    title: Text(location.city),
-                                    subtitle: Text(location.getDate()),
-                                    content: Align(
-                                      child: Image.asset(
-                                        'assets/icons/truck.png',
-                                      ),
-                                      alignment: Alignment.centerLeft,
-                                    ),
-                                    state: location.passed
-                                        ? StepState.complete
-                                        : location.isHere
-                                        ? StepState.editing
-                                        : StepState.indexed,
-                                  ),
-                                )
-                                .toList(),
+                            ...locations.map(
+                              (location) => Step(
+                                isActive: location.isHere || location.passed,
+                                title: Text(location.city),
+                                subtitle: Text(location.getDate()),
+                                content: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Image.asset('assets/icons/truck.png'),
+                                ),
+                                state: location.passed
+                                    ? StepState.complete
+                                    : location.isHere
+                                    ? StepState.editing
+                                    : StepState.indexed,
+                              ),
+                            ),
                           ],
                           currentStep: locations.indexOf(
                             locations.firstWhere((loc) => loc.isHere),

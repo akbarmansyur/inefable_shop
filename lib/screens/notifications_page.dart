@@ -4,6 +4,8 @@ import 'package:inefable_shop/screens/rating/rating_page.dart';
 import 'package:inefable_shop/screens/tracking_page.dart';
 
 class NotificationsPage extends StatelessWidget {
+  const NotificationsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(

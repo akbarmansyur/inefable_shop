@@ -6,6 +6,8 @@ import 'package:inefable_shop/screens/shop/check_out_page.dart';
 import 'shop_product.dart';
 
 class ShopBottomSheet extends StatefulWidget {
+  const ShopBottomSheet({super.key});
+
   @override
   _ShopBottomSheetState createState() => _ShopBottomSheetState();
 }
@@ -64,7 +66,7 @@ class _ShopBottomSheetState extends State<ShopBottomSheet> {
           child: Text(
             "Confirm",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,

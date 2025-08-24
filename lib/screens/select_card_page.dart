@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class SelectCardPage extends StatelessWidget {
+  const SelectCardPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width / 1.2;

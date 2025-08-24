@@ -8,7 +8,7 @@ import 'package:inefable_shop/models/user.dart';
 class ReceivePaymentPage extends StatelessWidget {
   final User user;
 
-  ReceivePaymentPage(this.user);
+  const ReceivePaymentPage(this.user, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ class ReceivePaymentPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    user.name.first + ' ' + user.name.last,
+                                    '${user.name.first} ${user.name.last}',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,

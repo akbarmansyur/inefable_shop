@@ -3,6 +3,8 @@ import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/screens/payment/promo_item.dart';
 
 class UnpaidPage extends StatefulWidget {
+  const UnpaidPage({super.key});
+
   @override
   _UnpaidPageState createState() => _UnpaidPageState();
 }
@@ -31,7 +33,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
           child: Text(
             "Pay Now",
             style: const TextStyle(
-              color: const Color(0xfffefefe),
+              color: Color(0xfffefefe),
               fontWeight: FontWeight.w600,
               fontStyle: FontStyle.normal,
               fontSize: 20.0,

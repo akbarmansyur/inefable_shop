@@ -6,6 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:inefable_shop/app_properties.dart';
 
 class LegalAboutPage extends StatefulWidget {
+  const LegalAboutPage({super.key});
+
   @override
   _LegalAboutPageState createState() => _LegalAboutPageState();
 }

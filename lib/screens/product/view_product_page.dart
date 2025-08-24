@@ -12,14 +12,14 @@ import 'components/product_options.dart';
 class ViewProductPage extends StatefulWidget {
   final Product product;
 
-  ViewProductPage({required this.product});
+  const ViewProductPage({super.key, required this.product});
 
   @override
   _ViewProductPageState createState() => _ViewProductPageState();
 }
 
 class _ViewProductPageState extends State<ViewProductPage> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   int active = 0;
 
@@ -73,7 +73,7 @@ class _ViewProductPageState extends State<ViewProductPage> {
         iconTheme: IconThemeData(color: darkGrey),
         actions: <Widget>[
           IconButton(
-            icon: new SvgPicture.asset(
+            icon: SvgPicture.asset(
               'assets/icons/search_icon.svg',
               fit: BoxFit.scaleDown,
             ),
@@ -93,7 +93,7 @@ class _ViewProductPageState extends State<ViewProductPage> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: <Widget>[
@@ -128,13 +128,13 @@ class _ViewProductPageState extends State<ViewProductPage> {
                         minWidth: 45,
                         minHeight: 45,
                       ),
+                      elevation: 0.0,
+                      shape: CircleBorder(),
+                      fillColor: Color.fromRGBO(255, 255, 255, 0.4),
                       child: Icon(
                         Icons.favorite,
                         color: Color.fromRGBO(255, 137, 147, 1),
                       ),
-                      elevation: 0.0,
-                      shape: CircleBorder(),
-                      fillColor: Color.fromRGBO(255, 255, 255, 0.4),
                     ),
                   ],
                 ),

@@ -6,48 +6,50 @@ import 'package:inefable_shop/models/category.dart';
 import 'components/staggered_category_card.dart';
 
 class CategoryListPage extends StatefulWidget {
+  const CategoryListPage({super.key});
+
   @override
   _CategoryListPageState createState() => _CategoryListPageState();
 }
 
 class _CategoryListPageState extends State<CategoryListPage> {
   List<Category> categories = [
-    Category(
-      Color(0xffFCE183),
-      Color(0xffF68D7F),
-      'Gadgets',
-      'assets/jeans_5.png',
-    ),
-    Category(
-      Color(0xffF749A2),
-      Color(0xffFF7375),
-      'Clothes',
-      'assets/jeans_5.png',
-    ),
-    Category(
-      Color(0xff00E9DA),
-      Color(0xff5189EA),
-      'Fashion',
-      'assets/jeans_5.png',
-    ),
-    Category(
-      Color(0xffAF2D68),
-      Color(0xff632376),
-      'Home',
-      'assets/jeans_5.png',
-    ),
-    Category(
-      Color(0xff36E892),
-      Color(0xff33B2B9),
-      'Beauty',
-      'assets/jeans_5.png',
-    ),
-    Category(
-      Color(0xffF123C4),
-      Color(0xff668CEA),
-      'Appliances',
-      'assets/jeans_5.png',
-    ),
+    // Category(
+    //   Color(0xffFCE183),
+    //   Color(0xffF68D7F),
+    //   'Gadgets',
+    //   'assets/jeans_5.png',
+    // ),
+    // Category(
+    //   Color(0xffF749A2),
+    //   Color(0xffFF7375),
+    //   'Clothes',
+    //   'assets/jeans_5.png',
+    // ),
+    // Category(
+    //   Color(0xff00E9DA),
+    //   Color(0xff5189EA),
+    //   'Fashion',
+    //   'assets/jeans_5.png',
+    // ),
+    // Category(
+    //   Color(0xffAF2D68),
+    //   Color(0xff632376),
+    //   'Home',
+    //   'assets/jeans_5.png',
+    // ),
+    // Category(
+    //   Color(0xff36E892),
+    //   Color(0xff33B2B9),
+    //   'Beauty',
+    //   'assets/jeans_5.png',
+    // ),
+    // Category(
+    //   Color(0xffF123C4),
+    //   Color(0xff668CEA),
+    //   'Appliances',
+    //   'assets/jeans_5.png',
+    // ),
   ];
 
   List<Category> searchResults = [];
@@ -102,11 +104,11 @@ class _CategoryListPageState extends State<CategoryListPage> {
                 onChanged: (value) {
                   if (value.isNotEmpty) {
                     List<Category> tempList = [];
-                    categories.forEach((category) {
-                      if (category.category.toLowerCase().contains(value)) {
+                    for (var category in categories) {
+                      if (category.name.toLowerCase().contains(value)) {
                         tempList.add(category);
                       }
-                    });
+                    }
                     setState(() {
                       searchResults.clear();
                       searchResults.addAll(tempList);
@@ -127,10 +129,10 @@ class _CategoryListPageState extends State<CategoryListPage> {
                 itemBuilder: (_, index) => Padding(
                   padding: EdgeInsets.symmetric(vertical: 16.0),
                   child: StaggeredCardCard(
-                    begin: searchResults[index].begin,
-                    end: searchResults[index].end,
-                    categoryName: searchResults[index].category,
-                    assetPath: searchResults[index].image,
+                    begin: Colors.red,
+                    end: yellow,
+                    categoryName: searchResults[index].name,
+                    assetPath: searchResults[index].imageUrl ?? "asd",
                   ),
                 ),
               ),
