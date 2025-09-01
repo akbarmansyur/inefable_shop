@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -20,20 +21,18 @@ class OfferCarousel extends StatelessWidget {
       subtitle: 'Diskon hingga 50% untuk semua item!',
     ),
     Offer(
-      imageUrl:
-          'https://images.unsplash.com/photo-1671099484139-b4674a9bf986?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fGZhc2hpb24lMjB0c2hpcnR8ZW58MHwwfDB8fHww',
+      imageUrl: 'https://images.unsplash.com/photo-1671099484139-b4674a9bf986',
       title: 'Casual Outfit',
       subtitle: 'Kaos distro mulai dari Rp99.000',
     ),
     Offer(
       imageUrl:
-          'https://plus.unsplash.com/premium_photo-1706759228478-05c2ab66c900?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGhvb2RpZXxlbnwwfDB8MHx8fDA%3D',
+          'https://plus.unsplash.com/premium_photo-1706759228478-05c2ab66c900',
       title: 'Exclusive Hoodie',
       subtitle: 'Gratis ongkir untuk semua hoodie',
     ),
     Offer(
-      imageUrl:
-          'https://images.unsplash.com/photo-1527016021513-b09758b777bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRlbmltJTIwamFja2V0fGVufDB8MHwwfHx8MA%3D%3D',
+      imageUrl: 'https://images.unsplash.com/photo-1527016021513-b09758b777bd',
       title: 'Denim Jacket',
       subtitle: 'Style kece buat nongkrong bareng teman',
     ),
@@ -55,7 +54,7 @@ class OfferCarousel extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
-                  image: NetworkImage(offer.imageUrl),
+                  image: CachedNetworkImageProvider(offer.imageUrl),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -65,9 +64,10 @@ class OfferCarousel extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   gradient: LinearGradient(
-                    colors: [Colors.black.withAlpha(120), Colors.transparent],
+                    colors: [Colors.black.withAlpha(150), Colors.transparent],
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
+                    stops: [0.3, 0.5],
                   ),
                 ),
                 child: Column(

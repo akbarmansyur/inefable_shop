@@ -1,5 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:inefable_shop/app_properties.dart';
 
 class CustomConvexNavbar extends StatelessWidget {
   final TabController controller;
@@ -10,14 +12,14 @@ class CustomConvexNavbar extends StatelessWidget {
     return ConvexAppBar(
       style: TabStyle.react,
       backgroundColor: Colors.white, // warna dasar
-      activeColor: Colors.black,
+      activeColor: yellow,
       color: Colors.grey,
       initialActiveIndex: controller.index,
       items: [
-        TabItem(icon: Icons.home_rounded, title: 'Beranda'),
-        TabItem(icon: Icons.category_rounded, title: 'Kategori'),
-        TabItem(icon: Icons.shopping_cart_outlined, title: 'Keranjang'),
-        TabItem(icon: Icons.person_rounded, title: 'Profil'),
+        TabItem(icon: Iconsax.home, title: 'Home'),
+        TabItem(icon: Iconsax.shop, title: 'Shop'),
+        TabItem(icon: Iconsax.favorite_chart, title: 'Wishlist'),
+        TabItem(icon: Iconsax.user, title: 'Profil'),
       ],
       onTap: (int index) {
         controller.animateTo(index);

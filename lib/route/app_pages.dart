@@ -3,10 +3,13 @@ import 'package:get/get.dart';
 import 'package:inefable_shop/bindings/home_binding.dart';
 import 'package:inefable_shop/bindings/intro_binding.dart';
 import 'package:inefable_shop/bindings/product_binding.dart';
+import 'package:inefable_shop/bindings/search_binding.dart';
 import 'package:inefable_shop/bindings/splash_binding.dart';
+import 'package:inefable_shop/controller/search_controller.dart';
 import 'package:inefable_shop/screens/intro_page.dart';
 import 'package:inefable_shop/screens/main/main_page.dart';
 import 'package:inefable_shop/screens/product/product_page.dart';
+import 'package:inefable_shop/screens/search_page.dart';
 import 'package:inefable_shop/screens/splash_page.dart';
 
 part 'app_routes.dart';
@@ -45,6 +48,14 @@ class AppPages {
       name: _Paths.productdetail,
       page: () => ProductPage(),
       binding: ProductBinding(),
+      curve: Curves.fastOutSlowIn,
+      transitionDuration: const Duration(milliseconds: 600),
+      transition: Transition.fade,
+    ),
+    GetPage(
+      name: _Paths.search,
+      page: () => SearchPage(),
+      binding: SearchBinding(),
       curve: Curves.fastOutSlowIn,
       transitionDuration: const Duration(milliseconds: 600),
       transition: Transition.fade,

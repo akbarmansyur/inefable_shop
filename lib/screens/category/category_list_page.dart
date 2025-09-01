@@ -5,14 +5,14 @@ import 'package:inefable_shop/models/category.dart';
 
 import 'components/staggered_category_card.dart';
 
-class CategoryListPage extends StatefulWidget {
-  const CategoryListPage({super.key});
+class BelanjaListPage extends StatefulWidget {
+  const BelanjaListPage({super.key});
 
   @override
-  _CategoryListPageState createState() => _CategoryListPageState();
+  _BelanjaListPageState createState() => _BelanjaListPageState();
 }
 
-class _CategoryListPageState extends State<CategoryListPage> {
+class _BelanjaListPageState extends State<BelanjaListPage> {
   List<Category> categories = [
     // Category(
     //   Color(0xffFCE183),

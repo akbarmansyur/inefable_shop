@@ -1,16 +1,17 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:inefable_shop/app_properties.dart';
 import 'package:inefable_shop/controller/home_controller.dart';
 import 'package:inefable_shop/custom_background.dart';
-import 'package:inefable_shop/models/product_model.dart';
 import 'package:inefable_shop/route/app_pages.dart';
 import 'package:inefable_shop/screens/category/category_list_page.dart';
+import 'package:inefable_shop/screens/category/shop_page.dart';
 import 'package:inefable_shop/screens/main/components/offer_widget.dart';
+import 'package:inefable_shop/screens/main/components/simple_appbar.dart';
 import 'package:inefable_shop/screens/main/components/simple_product_card.dart';
 import 'package:inefable_shop/screens/notifications_page.dart';
 import 'package:inefable_shop/screens/profile_page.dart';
@@ -37,30 +38,7 @@ class MainPage extends StatelessWidget {
           children: [
             Column(
               children: [
-                SizedBox(
-                  height: kToolbarHeight + MediaQuery.of(context).padding.top,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      IconButton(
-                        onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => NotificationsPage(),
-                          ),
-                        ),
-                        icon: Icon(Icons.notifications),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => SearchPage()),
-                          );
-                        },
-                        icon: SvgPicture.asset('assets/icons/search_icon.svg'),
-                      ),
-                    ],
-                  ),
-                ),
+                SimpleAppBar(),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -158,7 +136,7 @@ class MainPage extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  Spacer(),
+                                  SizedBox(width: 20),
                                   CountdownTimer(
                                     endTime:
                                         DateTime.now().millisecondsSinceEpoch +
@@ -175,6 +153,17 @@ class MainPage extends StatelessWidget {
                                         ),
                                       );
                                     },
+                                  ),
+                                  Spacer(),
+                                  TextButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      'Lihat Semua',
+                                      style: TextStyle(
+                                        color: darkGrey,
+                                        fontSize: 14,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -270,7 +259,7 @@ class MainPage extends StatelessWidget {
                 ),
               ],
             ),
-            CategoryListPage(),
+            ShopPage(),
             CheckOutPage(),
             ProfilePage(),
           ],

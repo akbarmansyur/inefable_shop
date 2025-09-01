@@ -7,6 +7,9 @@ class Routes {
   static const splash = _Paths.splash;
   static const intro = _Paths.intro;
   static const productdetail = _Paths.productdetail;
+  static const shop = _Paths.shop;
+  static const search = _Paths.search;
+
   // static const welcome = _Paths.welcome;
 }
 
@@ -17,6 +20,8 @@ class _Paths {
   static const splash = '/splash';
   static const intro = '/intro';
   static const productdetail = '/Productdetail';
+  static const shop = '/shop';
+  static const search = '/search';
 
   // Example :
   // static const index = '/';
