@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:inefable_shop/route/app_pages.dart';
 
 class SimpleAppBar extends StatelessWidget {
   const SimpleAppBar({super.key});
@@ -24,7 +25,7 @@ class SimpleAppBar extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: InkWell(
-                onTap: () => Get.toNamed("search"),
+                onTap: () => Get.toNamed(Routes.search),
                 child: TextField(
                   enabled: false,
                   // onChanged: (value) => controller.setSearchQuery(value),

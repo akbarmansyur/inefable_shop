@@ -5,7 +5,6 @@ import 'package:inefable_shop/bindings/intro_binding.dart';
 import 'package:inefable_shop/bindings/product_binding.dart';
 import 'package:inefable_shop/bindings/search_binding.dart';
 import 'package:inefable_shop/bindings/splash_binding.dart';
-import 'package:inefable_shop/controller/search_controller.dart';
 import 'package:inefable_shop/screens/intro_page.dart';
 import 'package:inefable_shop/screens/main/main_page.dart';
 import 'package:inefable_shop/screens/product/product_page.dart';
